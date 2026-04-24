@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/src/output.css">
     <title>Recipe Journal</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
-<body>
-    
+
+<body class="max-h-full">
+    <!-- create it only for mobile version not for pc. -->
+
+    <header class="flex flex-col">
+        <section class="mt-10 mx-6 flex justify-between items-center">
+            <h2 class="font-bold text-2xl">Recipe Book</h2>
+            <button>
+                <img src="assets/images/navbar-plus-icon.svg" alt="navbar-plus-icon" loading="lazy"
+                    class="w-8 contrast-50">
+            </button>
+        </section>
+
+        <section class="flex mx-auto border border-gray-400/70 w-fit mt-4 rounded-xl p-1 bg-gray-100">
+            <img src="assets/images/navbar-search-area-icon-.svg" alt="search-btn" class="w-6">
+            <input type="text" class="w-60">
+        </section>
+
+    </header>
+    <main></main>
+    <footer class="flex fixed bottom-0 w-full bg-gray-200 h-16">
+        <section class="flex mx-auto gap-x-10 items-start py-4">
+            <button class="flex gap-2">
+                <img src="assets/images/footer-fork-and-knife-btn-icon.svg" alt="Recipe-Book-icon" loading="lazy"
+                    class="w-5">
+                <h4 class="font-semibold">Recipe Book</h4>
+            </button>
+
+            <button class="flex gap-2">
+                <img src="assets/images/footer-pizza-btn-icon.svg" alt="Pizza-Calculator-icon" loading="lazy"
+                    class="w-5">
+                <h4 class="font-semibold">Pizza Calculator</h4>
+            </button>
+        </section>
+    </footer>
+
 </body>
+
 </html>
