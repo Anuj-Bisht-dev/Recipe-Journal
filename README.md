@@ -36,11 +36,7 @@ Recipe-Journal/<br>
 > ### CAUTION
 
 ```md
-> please donot change the file structure. it can affect the tailwindcss runtime. And also do not delete any file.
+please donot change the file structure. it can affect the tailwindcss runtime. And also do not delete any file.
 ```
-
-```md
-![License](https://img.shields.io/badge/license-MIT-blue)
 
 ![Status](https://img.shields.io/badge/status-active-success)
-```
