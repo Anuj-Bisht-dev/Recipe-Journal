@@ -12,7 +12,7 @@
     <!-- create it only for mobile version not for pc. -->
 
     <header class="flex flex-col">
-        <section class="mt-10 mx-6 flex justify-between items-center">
+        <section class="mt-8 mx-6 flex justify-between items-center">
             <h2 class="font-bold text-2xl">Recipe Book</h2>
             <button>
                 <img src="assets/images/navbar-plus-icon.svg" alt="navbar-plus-icon" loading="lazy"
@@ -22,11 +22,11 @@
 
         <section class="flex mx-auto border border-gray-400/70 w-fit mt-4 rounded-xl p-1 bg-gray-100">
             <img src="assets/images/navbar-search-area-icon-.svg" alt="search-btn" class="w-6">
-            <input type="text" class="w-60">
+            <input type="text" placeholder="search here" class="w-60 ml-2">
         </section>
 
     </header>
-    <main></main>
+    <main id="main-container" class="flex flex-wrap gap-y-3 justify-around my-10 mx-6"></main>
     <footer class="flex fixed bottom-0 w-full bg-gray-200 h-16">
         <section class="flex mx-auto gap-x-10 items-start py-4">
             <button class="flex gap-2">
@@ -44,5 +44,6 @@
     </footer>
 
 </body>
+<script src="main.js"></script>
 
 </html>

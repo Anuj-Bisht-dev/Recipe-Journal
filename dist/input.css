@@ -5,4 +5,12 @@
     .flex-center{
         @apply flex justify-center items-center;
     }
+
+    .items-img{
+        @apply w-24 h-18 rounded-md border border-black/30 shadow-gray-500 shadow-md;
+    }
+
+    .items-para{
+        @apply font-semibold w-20 leading-5 mt-1;
+    }
 }

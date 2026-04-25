@@ -1,4 +1,4 @@
-const CATEGORIES = [
+const categories = [
     { name: 'Asian', img: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80' },
     { name: 'Brunch', img: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80' },
     { name: 'Global', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80' },
@@ -11,3 +11,23 @@ const CATEGORIES = [
     { name: 'Sizzler', img: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=80' },
     { name: 'South Indian', img: 'https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=80' },
 ]
+
+const mainContainer = document.getElementById('main-container');
+
+function createItems(name, img) {
+    const item = document.createElement('div');
+    item.innerHTML = `<div> <img src=${img} class='items-img'> 
+    <p class='items-para'>${name}</p> </div>`;
+
+    mainContainer.append(item);
+}
+
+
+categories.forEach((value, index) => {
+
+    const name = categories[index].name;
+    const image = categories[index].img;
+
+    createItems(name, image)
+})
+
