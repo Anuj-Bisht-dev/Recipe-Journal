@@ -6,11 +6,48 @@
         @apply flex justify-center items-center;
     }
 
+    .items{
+        @apply animate-fade-in;
+    }
+
     .items-img{
-        @apply w-24 h-18 rounded-md border border-black/30 shadow-gray-500 shadow-md;
+        @apply w-24 h-18 rounded-md border border-black/30 shadow-gray-500 shadow-md ;
     }
 
     .items-para{
         @apply font-semibold w-20 leading-5 mt-1;
     }
+
+    /* pizza calculator section css */
+    .lists{
+        @apply border-b mx-4 flex justify-between px-4 bg-gray-100 py-0.5 rounded-md;
+    }
+
+    .lists-data{
+        @apply font-semibold;
+    }
+
+    .lists-time{
+        @apply text-sm text-gray-600;
+    }
+
 }
+
+/* animations */
+@theme {
+    --animate-fade-in: fade-in 1s ease-out;
+
+    @keyframes fade-in{
+        0% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+
