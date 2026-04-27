@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @import 'tailwindcss';
 
 @layer utility {
@@ -20,17 +22,35 @@
 
     /* pizza calculator section css */
     .lists{
-        @apply border-b mx-4 flex justify-between px-4 bg-gray-100 py-0.5 rounded-md;
+        @apply border-b border-gray-500 mx-4 flex justify-between px-4 bg-gray-100 py-0.5 rounded-md;
     }
 
     .lists-data{
-        @apply font-semibold;
+        @apply font-semibold flex items-center;
     }
 
     .lists-time{
         @apply text-sm text-gray-600;
     }
 
+    /* pages -> pizza Info  */
+    .upperSection{
+        @apply flex flex-col border-gray-200 border rounded-2xl px-4 py-2 w-45;
+    }
+
+    .upperSectionIng{
+        @apply text-sm text-gray-700;
+    }
+    .upperSectionAmt{
+        @apply text-2xl font-semibold;
+    }
+
+    .lowerSection{
+        @apply flex justify-between items-center flex-row  border-b-2 border-b-gray-100 py-2 px-2;
+    }
+    .lowerSectionIng{
+        @apply text-gray-500
+    }
 }
 
 /* animations */
@@ -48,6 +68,8 @@
             transform: scale(1);
         }
     }
+
+    --font-noto-sans: "Noto Sans", sans-serif;
 }
 
 

@@ -17,14 +17,15 @@ const pizzaQuantity = [
 
 const pizzaCalculatorMainConatainer = document.getElementById('pizza-calculator-main-container');
 
-function createLists(data, time) {
-    const list = document.createElement('div');
-    list.classList.add('lists');
-    list.innerHTML = `<section> 
+function createLists(data, time, index) {
+    const list = document.createElement('a');
+    list.href = `pages/pizzaInfo${index}.html`;
+    list.innerHTML = `<div class='lists'>
+                        <section> 
                             <p class ='lists-data'>${data}</p> 
                             <p class ='lists-time'>${time}</p> 
                         </section> 
-                        <section class='lists-data'>...</section>`
+                        <section class='lists-data'>...</section> </div>`
 
     pizzaCalculatorMainConatainer.append(list);
 }
@@ -33,5 +34,16 @@ pizzaQuantity.forEach((value, index) => {
 
     const data = pizzaQuantity[index].data;
     const time = pizzaQuantity[index].time;
-    createLists(data, time);
+    createLists(data, time, index);
 });
+
+function listClickEvent(e) {
+    if (e.target.tagName === 'DIV' ||
+        e.target.classList.contains('lists-data') ||
+        e.target.classList.contains('lists-time')) {
+
+        console.log('clicked');
+    }
+}
+
+pizzaCalculatorMainConatainer.addEventListener('click', listClickEvent);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/project-favicon-image.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Recipe Journal</title>
+</head>
+
+<body class="font-noto-sans">
+    <header>
+        <a href="../pizza-calculator.html">
+            <img src="../assets/images/pizzaCalculatorInfo-arrow-btn-icon.svg" alt="arrow-btn" class="w-8 mt-4 contrast-50">
+        </a>
+        <h3 class="font-semibold text-xl mt-2 mb-5 ml-4">6R, 0S, 160 g, 100 g, 65%, 72 hrs</h3>
+    </header>
+    <main>
+        <section id="pizzaInfo-upper-section" class="flex flex-wrap justify-around gap-y-2 mx-2"></section>
+
+        <section id="pizzaInfo-lower-section" class="mt-2 flex flex-col mx-2"></section>
+
+    </main>
+</body>
+<script type="module">
+
+    import { UpperSectionRendering, LowerSectionRendering } from './pizzaInfo.js';
+
+    const pizzaInfo0UpperSection = [
+        { key: "Flour", value: "960 g" },
+        { key: "Water", value: "624 g" },
+        { key: "Yeast", value: "3.00 g" },
+        { key: "Salt", value: "28.8 g" },
+        { key: "Regular Dough", value: "269 g" },
+        { key: "Small Dough", value: "168 g" },
+    ];
+
+    UpperSectionRendering(pizzaInfo0UpperSection);
+
+
+    const pizzaInfo0LowerSection = [
+        { key: "Regular", value: 6 },
+        { key: "Small", value: 0 },
+
+        { key: "Flour Regular", value: "160 g" },
+        { key: "Flour Small", value: "100 g" },
+
+        { key: "Water %", value: "65%" },
+        { key: "Fermentation Time", value: "72 hrs" },
+        { key: "Salt %", value: "3%" },
+    ];
+
+    LowerSectionRendering(pizzaInfo0LowerSection);
+
+</script>
+
+</html>
