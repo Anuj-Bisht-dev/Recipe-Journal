@@ -19,7 +19,7 @@ const pizzaCalculatorMainConatainer = document.getElementById('pizza-calculator-
 
 function createLists(data, time, index) {
     const list = document.createElement('a');
-    list.href = `pages/pizzaInfo${index}.html`;
+    list.href = `/public/src/pages/pizzaInfo/pizzaInfo${index}.html`;
     list.innerHTML = `<div class='lists'>
                         <section> 
                             <p class ='lists-data'>${data}</p> 

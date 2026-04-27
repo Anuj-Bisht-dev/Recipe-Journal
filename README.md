@@ -1,4 +1,4 @@
-## Welcome to the Repo:
+## Welcome to the Project Repo:
 
 <ul>
 
@@ -22,21 +22,34 @@ A website to solve a real-life problem of a man. who carries multiple of recipe 
 
 ## File Structure
 
-<ins>
 
-Recipe-Journal/<br>
-├── assets/<br>
-│ └── images/ <br>
-├── src/<br>
-│ └── output.css<br>
-├── index.html<br>
-├── main.js<br>
-└── input.css<br>
+```yaml
+recipe-journal
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    ├── public
+    │   ├── images
+    │   └── src
+    │       ├── pages
+    │       │   ├── pizzaCalculator
+    │       │   │   ├── pizza-calculator.html
+    │       │   │   └── pizzaCalculatorScript.js
+    │       │   └── pizzaInfo
+    │       │       ├── pizzaInfo0.html
+    │       │       └── pizzaInfo.js
+    │       ├── script
+    │       │   └── main.js
+    │       └── styles
+    │           ├── input.css
+    │           └── output.css
+    └── README.md
+```
 
 > ### CAUTION
 
-```md
+
 please donot change the file structure. it can affect the tailwindcss runtime. And also do not delete any file.
-```
+
 
 ![Status](https://img.shields.io/badge/status-active-success)
