@@ -17,17 +17,22 @@ const pizzaQuantity = [
 
 const pizzaCalculatorMainConatainer = document.getElementById('pizza-calculator-main-container');
 
-function createLists(data, time, index) {
-    const list = document.createElement('a');
-    list.href = `/public/src/pages/pizzaInfo/pizzaInfo${index}.html`;
-    list.innerHTML = `<div class='lists'>
-                        <section> 
-                            <p class ='lists-data'>${data}</p> 
-                            <p class ='lists-time'>${time}</p> 
-                        </section> 
-                        <section class='lists-data'>...</section> </div>`
+function createLists(data, time) {
+    const list = document.createElement('div');
+    list.classList.add('lists');
+    list.innerHTML = `<section> 
+    <p class ='lists-data'>${data}</p> 
+    <p class ='lists-time'>${time}</p> 
+    </section> 
+    <section class='lists-data'>...</section>`
 
-    pizzaCalculatorMainConatainer.append(list);
+    const divOnList = document.createElement('a');
+    divOnList.classList.add('divOnList');
+    divOnList.previousElementSibling
+    divOnList.href = `/public/src/pages/pizzaInfo/pizzaInfo.html`;
+
+    pizzaCalculatorMainConatainer.append(list, divOnList);
+    divOnList.previousElementSibling.firstElementChild
 }
 
 pizzaQuantity.forEach((value, index) => {
@@ -37,12 +42,13 @@ pizzaQuantity.forEach((value, index) => {
     createLists(data, time, index);
 });
 
-function listClickEvent(e) {
-    if (e.target.tagName === 'DIV' ||
-        e.target.classList.contains('lists-data') ||
-        e.target.classList.contains('lists-time')) {
 
-        console.log('clicked');
+function listClickEvent(e) {
+    if (e.target.classList.contains('divOnList')) {
+        const elementData = e.target.previousElementSibling.firstElementChild.firstElementChild.textContent;
+        console.log(elementData);
+        return (localStorage.setItem('targetResult', elementData));
+
     }
 }
 

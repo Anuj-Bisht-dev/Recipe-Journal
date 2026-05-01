@@ -33,6 +33,10 @@
         @apply text-sm text-gray-600;
     }
 
+    .divOnList{
+        @apply  w-90 h-12 mx-4 flex justify-between px-4 bg-transparent py-0.5 rounded-md gap-200 relative bottom-12 -mb-7;
+    }
+
     /* pages -> pizza Info  */
     .upperSection{
         @apply flex flex-col border-gray-200 border rounded-2xl px-4 py-2 w-45;
@@ -55,6 +59,8 @@
 
 /* animations */
 @theme {
+    --font-noto-sans: "Noto Sans", sans-serif;
+
     --animate-fade-in: fade-in 1s ease-out;
 
     @keyframes fade-in{
@@ -68,8 +74,6 @@
             transform: scale(1);
         }
     }
-
-    --font-noto-sans: "Noto Sans", sans-serif;
 }
 
 
